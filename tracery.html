@@ -1,0 +1,23 @@
+<html>
+<body>
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+	<script src="tracery.js"></script>
+	<script>
+	var spellbook = {
+		"player": ["Player"],
+		"object": ["Crate","Badger"],
+		"rule": ["\\[ Player | #Object# \\] -> \\[ Player | #Object# \\]"],
+		//#[hero:#name#][heroPet:#animal#]story#
+		"origin": ["#[Object:#object#]rule#"]
+	};
+	$(document).ready(function() {
+		var grammar = tracery.createGrammar(spellbook);
+		var s;
+		for(var i=0; i<3; i++){
+			s = grammar.flatten("#origin#");
+			document.write("<p>"+s+"</p>");
+		}
+	});
+	</script>
+</body>
+</html>
