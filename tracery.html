@@ -6,9 +6,10 @@
 	var spellbook = {
 		"player": ["Player"],
 		"object": ["Crate","Badger"],
-		"rule": ["\\[ Player | #Object# \\] -> \\[ Player | #Object# \\]"],
-		//#[hero:#name#][heroPet:#animal#]story#
-		"origin": ["#[Object:#object#]rule#"]
+		"direction": ["UP","DOWN","LEFT","RIGHT",""],
+		"rule": ["#ApplDir# \\[ #MoveDir# Player | #Object# \\] -> \\[ #ResDir# Player | #ResDir# #Object# \\]"],
+		
+		"origin": ["#[Object:#object#][ApplDir:#direction#][MoveDir:#direction#][ResDir:#direction#]rule#"]
 	};
 	$(document).ready(function() {
 		var grammar = tracery.createGrammar(spellbook);
