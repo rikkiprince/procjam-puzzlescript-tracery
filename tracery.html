@@ -5,16 +5,28 @@
 	<script>
 	var spellbook = {
 		"player": ["Player"],
-		"object": ["Crate","Badger"],
+		"objects": ["Crate","Badger"],
 		"direction": ["UP","DOWN","LEFT","RIGHT",""],
 		"rule": ["#ApplDir# \\[ #MoveDir# Player | #Object# \\] -> \\[ #ResDir# Player | #ResDir# #Object# \\]"],
+
+		"pushRule": ["\\[ > Player | #Object# \\] -> \\[ > Player | > #Object# \\] (push)"],
+		"bumpRule": ["\\[ > Player | #Object# \\] -> \\[ Player | > #Object# \\] (bump)"],
+		"swapRule": ["\\[ > Player | #Object# \\] -> \\[ #Object# | Player \\] (swap)"],
+		"blokRule": ["\\[ > Player | #Object# \\] -> \\[ Player | #Object# \\] (block)"],
+		"oppoRule": ["\\[ < Player | #Object# \\] -> \\[ < Player | > #Object# \\] (opposite)"],
+		"rules": ["#[Object:#Object#]pushRule#",
+				  "#[Object:#Object#]bumpRule#",
+				  "#[Object:#Object#]swapRule#",
+				  "#[Object:#Object#]blokRule#",
+				  "#[Object:#Object#]oppoRule#"
+				 ],
 		
-		"origin": ["#[Object:#object#][ApplDir:#direction#][MoveDir:#direction#][ResDir:#direction#]rule#"]
+		"origin": ["#[Object:Badger]rules# <br> #[Object:Crate]rules#"]
 	};
 	$(document).ready(function() {
 		var grammar = tracery.createGrammar(spellbook);
 		var s;
-		for(var i=0; i<3; i++){
+		for(var i=0; i<1; i++){
 			s = grammar.flatten("#origin#");
 			document.write("<p>"+s+"</p>");
 		}
