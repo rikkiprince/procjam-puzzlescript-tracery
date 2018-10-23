@@ -21,14 +21,49 @@
 				  "#[Object:#Object#]oppoRule#"
 				 ],
 		
-		"origin": ["#[Object:Badger]rules# <br> #[Object:Crate]rules#"]
+		"ruleSection": ["#[Object:Crate2]rules#\n#[Object:Crate1]rules#"],
+
+		"level": ["#toprowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#toprowtiles#"],
+		"toprowtiles": "*********",
+		"midrowtiles": "*#tile##tile##tile##tile##tile##tile##tile#*",
+		"tile": [".",".",".",".",".",".",".","*","P","C","T"],
+
+		"puzzlescript": "title #title#\nauthor #author#\n\n"+
+						"========\nOBJECTS\n========\n\n"+
+						"Background .\n#colour#\n\n"+
+						"Wall *\n#colour#\n\n"+
+						"Player P\n#colour#\n\n"+
+						"Crate1 C\n#colour#\n\n"+
+						"Crate2 D\n#colour#\n\n"+
+						"Target T\n#colour#\n\n"+
+						"=======\nLEGEND\n=======\n\n"+
+						"=======\nSOUNDS\n=======\n\n"+
+						"================\nCOLLISIONLAYERS\n================\n\n"+
+						"Background\nTarget\nPlayer, Wall, Crate1, Crate2\n\n"+
+						"======\nRULES\n======\n\n"+
+						"#ruleSection#\n\n"+
+						"==============\nWINCONDITIONS\n==============\n\n"+
+						"All Target on Crate1\n\n"+
+						"=======\nLEVELS\n=======\n\n"+
+						"#level#",
+
+		/* metadata */
+		"title": "Rule Generation",
+
+		"author": "#prenominal# #forename# #surname# #postnominal#",
+		"prenominal": ["","","","","","Dr","Dr","Professor","Sir"],
+		"forename": ["Gerald","Rosalind"],
+		"surname": ["Bigginsworth","Gallagher","Roboto","Asimov"],
+		"postnominal": ["","","","","","","PhD","MBE","FREng"],
+
+		"colour": ["black","white","lightgrey","grey","darkgrey","red","darkred","lightred","brown","darkbrown","lightbrown","orange","yellow","green","darkgreen","lightgreen","blue","lightblue","darkblue","purple","pink","transparent"]
 	};
 	$(document).ready(function() {
 		var grammar = tracery.createGrammar(spellbook);
 		var s;
 		for(var i=0; i<1; i++){
-			s = grammar.flatten("#origin#");
-			document.write("<p>"+s+"</p>");
+			s = grammar.flatten("#puzzlescript#");
+			document.write("<pre>"+s+"</pre>");
 		}
 	});
 	</script>
