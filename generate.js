@@ -1,4 +1,4 @@
-var spellbook = {
+var puzzlescript_tracery_rules = {
 	"player": ["Player"],
 	"objects": ["Crate","Badger"],
 	"direction": ["UP","DOWN","LEFT","RIGHT",""],
@@ -56,11 +56,3 @@ var spellbook = {
 
 	"colour": ["black","white","lightgrey","grey","darkgrey","red","darkred","lightred","brown","darkbrown","lightbrown","orange","yellow","green","darkgreen","lightgreen","blue","lightblue","darkblue","purple","pink","transparent"]
 };
-$(document).ready(function() {
-	var grammar = tracery.createGrammar(spellbook);
-	var s;
-	for(var i=0; i<1; i++){
-		s = grammar.flatten("#puzzlescript#");
-		document.write("<pre>"+s+"</pre>");
-	}
-});

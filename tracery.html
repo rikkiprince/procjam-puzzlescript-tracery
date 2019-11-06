@@ -3,5 +3,15 @@
 	<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 	<script src="tracery.js"></script>
 	<script src="generate.js"></script>
+	<script>
+		$(document).ready(function() {
+			var grammar = tracery.createGrammar(puzzlescript_tracery_rules);
+			var s;
+			for(var i=0; i<1; i++){
+				s = grammar.flatten("#puzzlescript#");
+				document.write("<pre>"+s+"</pre>");
+			}
+		});
+	</script>
 </body>
 </html>
