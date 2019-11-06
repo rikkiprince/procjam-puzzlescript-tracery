@@ -56,3 +56,14 @@ var puzzlescript_tracery_rules = {
 
 	"colour": ["black","white","lightgrey","grey","darkgrey","red","darkred","lightred","brown","darkbrown","lightbrown","orange","yellow","green","darkgreen","lightgreen","blue","lightblue","darkblue","purple","pink","transparent"]
 };
+
+class Generator {
+	constructor() {
+		this.grammar = tracery.createGrammar(puzzlescript_tracery_rules);
+	}
+
+	generatePuzzleScript() {
+		var s = this.grammar.flatten("#puzzlescript#");
+		return s;
+	}
+}

@@ -5,12 +5,9 @@
 	<script src="generate.js"></script>
 	<script>
 		$(document).ready(function() {
-			var grammar = tracery.createGrammar(puzzlescript_tracery_rules);
-			var s;
-			for(var i=0; i<1; i++){
-				s = grammar.flatten("#puzzlescript#");
-				document.write("<pre>"+s+"</pre>");
-			}
+			var g = new Generator();
+			var s = g.generatePuzzleScript();
+			document.write("<pre>"+s+"</pre>");
 		});
 	</script>
 </body>
