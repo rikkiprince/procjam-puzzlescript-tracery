@@ -49,9 +49,9 @@ var puzzlescript_tracery_rules = {
 	"title": "Rule Generation",
 
 	"author": "#prenominal# #forename# #surname# #postnominal#",
-	"prenominal": ["","","","","","Dr","Dr","Professor","Sir"],
-	"forename": ["Gerald","Rosalind"],
-	"surname": ["Bigginsworth","Gallagher","Roboto","Asimov"],
+	"prenominal": ["","","","","","","","","","","","","","Dr","Dr","Dr","Dr","Professor"],
+	"forename": ["Gerald","Rosalind","Eleanor","Eva","Beatrice","Edith","Esther","Sylvia","Vivian","Victor","Dorothy","Mildred","Edna","Albert","Cecil","Edgar","Fred","Milton","Vernon","Wilbur","Doris","Wilma","Herbert","Alivn","Melvin"],
+	"surname": ["Bigginsworth","Roboto","Asimov","Adams","Atwood","Ballard","Bradbury","Clarke","Cline","Dick","Doctorow","Gaiman","Heinlein","Le Guin","Mieville","Orwell","Pratchett","Stephenson","Verne","Vonnegut","Huxley","Hughes"],
 	"postnominal": ["","","","","","","PhD","MBE","FREng"],
 
 	"colour": ["black","white","lightgrey","grey","darkgrey","red","darkred","lightred","brown","darkbrown","lightbrown","orange","yellow","green","darkgreen","lightgreen","blue","lightblue","darkblue","purple","pink","transparent"]
