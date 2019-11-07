@@ -25,7 +25,7 @@ class Generator {
 				"#[Object:#Object#]pushRule#",
 				"#[Object:#Object#]bumpRule#",
 				"#[Object:#Object#]swapRule#",
-				"#[Object:#Object#]blokRule#",
+				/*"#[Object:#Object#]blokRule#",*/
 				"#[Object:#Object#]oppoRule#"
 			],
 			"ruleSection": ["#[Object:Crate2]rules#\n#[Object:Crate1]rules#"],
