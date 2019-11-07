@@ -32,9 +32,10 @@ class Generator {
 
 			/* Levels */
 			"level": [
-				"#toprowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#toprowtiles#"
+				"#toprowtiles#\n#bufferrow#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#bufferrow#\n#toprowtiles#"
 			],
 			"toprowtiles": "*********",
+			"bufferrow": "*.......*",
 			"midrowtiles": "*#tile##tile##tile##tile##tile##tile##tile#*",
 			"tile": [".",".",".",".",".",".",".","*","P","C","T"],
 
