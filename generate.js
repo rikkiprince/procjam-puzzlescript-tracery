@@ -31,6 +31,24 @@ class Generator {
 			"ruleSection": ["#[Object:Crate2]rules#\n#[Object:Crate1]rules#"],
 
 			/* Levels */
+			"blocktile": [".",".",".",".",".",".",".",".","*","*"],
+			"emptytile": ".",
+			"blockrow": "#blocktile##emptytile##blocktile#",
+			"blockplayer": "#blocktile#P#blocktile#",
+			"blocktarget": "#blocktile#T#blocktile#",
+			"blockcrate": "#blocktile#C#blocktile#",
+			"middleblockorder": [
+				"#blockplayer##blocktarget##blockcrate#",
+				"#blockplayer##blockcrate##blocktarget#",
+				"#blocktarget##blockplayer##blockcrate#",
+				"#blocktarget##blockplayer##blockcrate#",
+				"#blockcrate##blocktarget##blockplayer#",
+				"#blockcrate##blockplayer##blocktarget#",
+			],
+			"newlevel": [
+				"#blockrow##blockrow##blockrow#\n#middleblockorder#\n#blockrow##blockrow##blockrow#"
+			],
+
 			"level": [
 				"#toprowtiles#\n#bufferrow#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#bufferrow#\n#toprowtiles#"
 			],
@@ -57,7 +75,7 @@ class Generator {
 							"==============\nWINCONDITIONS\n==============\n\n"+
 							"All Crate1 on Target\n\n"+
 							"=======\nLEVELS\n=======\n\n"+
-							"#level#\n#level#\n#level#",
+							"#newlevel#\n\n#newlevel#\n\n#newlevel#",
 
 			/* Game Metadata */
 			"title": "Rule Generation",
