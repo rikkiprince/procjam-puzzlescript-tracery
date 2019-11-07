@@ -57,7 +57,7 @@ class Generator {
 							"==============\nWINCONDITIONS\n==============\n\n"+
 							"All Crate1 on Target\n\n"+
 							"=======\nLEVELS\n=======\n\n"+
-							"#level#",
+							"#level##level##level#",
 
 			/* Game Metadata */
 			"title": "Rule Generation",
