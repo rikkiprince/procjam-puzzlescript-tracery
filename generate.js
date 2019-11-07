@@ -42,8 +42,8 @@ class Generator {
 			/* Generate PuzzleScript */
 			"puzzlescript": "title #title#\nauthor #author#\n\n"+
 							"========\nOBJECTS\n========\n\n"+
-							"Background .\n#darkcolour#\n\n"+
-							"Wall *\n#darkcolour#\n\n"+
+							"Background .\n#backgroundcolour#\n\n"+
+							"Wall *\n#wallcolour#\n\n"+
 							"Player P\n#mediumcolour#\n00000\n00.00\n00000\n00...\n00...\n\n"+
 							"Crate1 C\n#lightcolour#\n00000\n0....\n0....\n0....\n00000\n\n"+
 							"Crate2 D\n#lightcolour#\n\n"+
@@ -70,13 +70,15 @@ class Generator {
 
 			/* Colours */
 			"colour": ["#darkcolour#", "#mediumcolour#", "#lightcolour#"],
-			"darkcolour": [
+			"backgroundcolour": [
 				"black",
 				"darkgrey",
+				"darkbrown"
+			],
+			"wallcolour": [
 				"darkred",
-				"darkbrown",
 				"darkgreen",
-				"darkblue",
+				"darkblue"
 			],
 			"mediumcolour": [
 				"grey",
@@ -95,8 +97,8 @@ class Generator {
 				"lightred",
 				"lightbrown",
 				"lightgreen",
-				"lightblue",
-				"transparent"
+				"lightblue"/*,
+				"transparent"*/
 			]
 		};
 	}
