@@ -15,6 +15,7 @@ class Generator {
 			"direction": ["UP","DOWN","LEFT","RIGHT",""],
 			"rule": ["#ApplDir# \\[ #MoveDir# Player | #Object# \\] -> \\[ #ResDir# Player | #ResDir# #Object# \\]"],
 
+			/* Rules */
 			"pushRule": ["\\[ > Player | #Object# \\] -> \\[ > Player | > #Object# \\] (push)"],
 			"bumpRule": ["\\[ > Player | #Object# \\] -> \\[ Player | > #Object# \\] (bump)"],
 			"swapRule": ["\\[ > Player | #Object# \\] -> \\[ #Object# | Player \\] (swap)"],
@@ -27,9 +28,9 @@ class Generator {
 				"#[Object:#Object#]blokRule#",
 				"#[Object:#Object#]oppoRule#"
 			],
-			
 			"ruleSection": ["#[Object:Crate2]rules#\n#[Object:Crate1]rules#"],
 
+			/* Levels */
 			"level": [
 				"#toprowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#midrowtiles#\n#toprowtiles#"
 			],
@@ -37,6 +38,7 @@ class Generator {
 			"midrowtiles": "*#tile##tile##tile##tile##tile##tile##tile#*",
 			"tile": [".",".",".",".",".",".",".","*","P","C","T"],
 
+			/* Generate PuzzleScript */
 			"puzzlescript": "title #title#\nauthor #author#\n\n"+
 							"========\nOBJECTS\n========\n\n"+
 							"Background .\n#darkcolour#\n\n"+
@@ -56,7 +58,7 @@ class Generator {
 							"=======\nLEVELS\n=======\n\n"+
 							"#level#",
 
-			/* metadata */
+			/* Game Metadata */
 			"title": "Rule Generation",
 
 			"author": "#prenominal# #forename# #surname# #postnominal#",
@@ -65,6 +67,7 @@ class Generator {
 			"surname": ["Bigginsworth","Roboto","Asimov","Adams","Atwood","Ballard","Bradbury","Clarke","Cline","Dick","Doctorow","Gaiman","Heinlein","Le Guin","Mieville","Orwell","Pratchett","Stephenson","Verne","Vonnegut","Huxley","Hughes"],
 			"postnominal": ["","","","","","","PhD","MBE","FREng"],
 
+			/* Colours */
 			"colour": ["#darkcolour#", "#mediumcolour#", "#lightcolour#"],
 			"darkcolour": [
 				"black",
